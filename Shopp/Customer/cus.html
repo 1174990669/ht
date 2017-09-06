@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>客服</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<style>
+		html,body,ul,p{margin:0;padding:0;}
+		header .C-div{height:.88rem;border-bottom:1px solid #e6e6e6;font-size:.4rem;text-align:center;}
+		header .C-div span{line-height:.88rem;padding-right:.32rem}
+		header .C-div img{width:.4rem;height:.4rem;float:left;margin:.28rem 0 0 .32rem;} 
+		section{background:#f9f9f9;position:relative;height:11.06rem;}
+		section p:nth-of-type(1){font-size:.3rem;color:#898989;text-align:center;padding-top:.24rem;}
+		/*section p:nth-of-type(2){position:relative;font-size:.3rem;}*/
+		section img{border-radius:50%;margin-left:.36rem;width:1.6rem;height:1.6rem;}
+		section .span-after{position:absolute;background:#898989;border:.2rem solid #f9f9f9;border-right:.26rem solid #898989;top:.9rem;left:2rem;}
+		section .span-after:after{position:absolute;content:"";border:.2rem solid transparent;border-right:.2rem solid white;top:-.19rem;left:-.15rem;background:transparent;}
+		section .span-p{position:absolute;border:1px solid #f9f9f9;width:3.8rem;height:2.12rem;border-radius:0.1rem;background:white;top:.7rem;left:2.4rem;padding:.2rem;font-size:.3rem}
+		footer{position:fixed;bottom:0;height:1.68rem;background:#ebebeb;width:100%;font-size:.3rem;}
+		footer .C-fixed span{position:absolute;bottom:.16rem;left:.14rem;color:#8b8b8b}
+		.C-fixed input{width:3.7rem;height:1.1rem;outline:none;border:1px solid gray;border-radius:.1rem;font-size:.4rem;position:absolute;left:1.6rem;top:.35rem;}
+		.C-fixed img{position:absolute;}
+		.C-fixed img:nth-of-type(1){width:.66rem;height:.68rem;top:.33rem;left:.38rem;}
+		.C-fixed img:nth-of-type(2){width:.66rem;height:.66rem;top:.54rem;right:1.2rem;}
+		.C-fixed img:nth-of-type(3){width:.66rem;height:.66rem;top:.54rem;right:.36rem;}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="C-div">
+			<img src="./images/z.jpg" alt="图片开小差啦">
+			<span>爱购店小二</span>
+		</div>
+	</header>
+	<section>
+		<div class="d-left" >
+			<p>05-22&nbsp;17: 32</p>
+			<img src="./images/k.jpg" alt="图片开小差啦">
+			<!-- <p> -->
+			<span class="span-after"></span>
+			<span class="span-p">
+				您好,店小二爱购很高兴为您服务,请问有什么可以帮助您的吗？请您输入关键字,店小二马上为您排忧解难哦~
+			</span>
+		</div>
+		<div class="d-right">
+				<p>05-22&nbsp;17: 32</p>
+				<img src="./images/k.jpg" alt="图片开小差啦">
+				<!-- <p> -->
+				<span class="span-after"></span>
+				<span class="span-p">
+					您好,店小二爱购很高兴为您服务,请问有什么可以帮助您的吗？请您输入关键字,店小二马上为您排忧解难哦~
+				</span>	
+		</div>
+		<!-- </p> -->
+	</section>
+	<footer>
+		<div class="C-fixed">
+			<img id="img-left" src="./images/re.jpg" alt="图片被台风吹走啦">
+			<span>人工服务</span>
+			<input type="text">
+			<img id="img" src="./images/y.jpg" alt="图片被台风吹走啦" >
+			<img id="img-right" src="./images/j.jpg" alt="图片被台风吹走啦">
+		</div>
+	</footer>
+
+	<script>
+		window.onload = function(){
+            getRem(750,100)
+        };
+        window.onresize = function(){
+            getRem(750,100)
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+        }
+	</script>
+</body>
+</html>

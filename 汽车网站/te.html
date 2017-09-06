@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#div1{position:relative;width:800px;height: 1200px;background:green;overflow: hidden;z-index:1;transition:1s; }
+		#div2{position: relative;width: 1000px;height: 500px;background: purple;bottom:-900px;z-index: 3;transition:1s;}
+		img{position: absolute;z-index: 2;top:672px;left:30%;transition:1s;}
+		/*#img:hover #div2{top:20px;transition:1s;}*/
+		/*#div1:hover #img{top:-400px;transition:1s;}*/
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<div id="div2">
+		</div>
+		<img src="./img/xhr.jpg" alt="图片开小差啦" id="img">
+	</div>
+
+	<script>
+		window.onload=function(){
+			var aImg=document.getElementById('img');
+			// var oDiv=document.getElementById('div2');
+
+			document.onclick=function(){
+				aImg.style.top="-500px";
+				// oDiv.style.top='50px'
+			}
+		}
+	</script>
+</body>
+</html>

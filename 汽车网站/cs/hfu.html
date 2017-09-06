@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #aa{font-size: 18px;color:red;}
+    </style>
+</head>
+<body>
+<div style="display:none" id="string">今天下雨，天气不好 
+</div> 
+   <p id="showStr"></p> 
+
+
+
+<script language="javascript">
+var index = 0;  
+var str = document.getElementById("string").innerHTML; 
+function type() {  
+if(index == str.length) {  
+index = 0;  
+}  
+document.getElementById("showStr").innerText = str.substring(0, index++);  
+// console.log(index)
+}  
+setInterval(type, 500); //通过定时器来让文字逐步显示
+</script>
+
+
+</body>
+</html>

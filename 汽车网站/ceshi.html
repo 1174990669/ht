@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>导航条3D旋转</title>
+  <link rel="stylesheet" href="cs/bootstrap.css"><!-- 引用的bootstrap插件 -->
+  <link rel="stylesheet" href="cs/sy.css">
+  <link rel="stylesheet" href="cs/swiper-3.4.2.min.css"><!-- 引用的swiper插件 -->
+  <link rel="shortcut icon" href="./img/cb.jpg" type="image/x-icon">
+  <script src="js/jquery-1.11.1.js"></script><!-- 引用的bootstrap  jquery插件 -->
+  <script src="js/sy.js"></script>
+  <script src="js/bootstrap.js"></script><!-- 引用的bootstrap  js插件 -->
+  <script src="js/swiper-3.4.2.jquery.min.js"></script><!-- 引用的swiper插件
+ -->
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_7omblkmybzvholxr.css">
+
+  <style>
+    img{opacity:0;transition:3s;}
+    img:nth-of-type(1){opacity:1;}
+    img:nth-of-type(2){opacity:1;}
+  </style>
+</head>
+<body>
+   <div class="div1" style="height: 800px;margin-top:400px;position: absolute;">
+    <div class="div2">
+    <div class="div3">
+      <img src="./img/x1.jpg" alt="">
+      <img src="./img/x2.jpg" alt="">
+      <img src="./img/x3.jpg" alt="">
+      <img src="./img/x4.jpg" alt="">
+      <img src="./img/x5.jpg" alt="">
+      <img src="./img/x6.jpg" alt="">
+      <img src="./img/x7.jpg" alt="">
+      <img src="./img/x8.jpg" alt="">
+      <img src="./img/x9.jpg" alt="">
+      <img src="./img/x10.jpg" alt="">
+      <img src="./img/x11.jpg" alt="">
+      <img src="./img/x12.jpg" alt="">
+      </div>
+      </div>
+   </div>
+
+ 
+  <script>
+     
+      $(window).scroll(function(){
+      $('img').each(function(i,elem){
+        if($(elem).offset().top<$(window).height()+$(document).scrollTop()){
+          $(elem).attr('src',$(elem).attr('-src'))
+          $(elem).css('opacity',1)
+        }
+      })
+    })
+     
+  </script>
+</body>
+</html>

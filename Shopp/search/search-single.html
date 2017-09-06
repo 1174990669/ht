@@ -1,0 +1,95 @@
+<!DOCTYPE html><!-- 单品页面 -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>search-single</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_385541_1w9ns6yhw5pl23xr.css">
+	<style> 
+		html,body,ul{margin:0;padding:0;font-family:'微软雅黑';}
+		body{background:#f9f9f9;max-width:768px;margin:0 auto;}
+		header{width:100%;height:1.14rem;margin-top:.4rem;position:relative;}
+		header .iconfont{position:absolute;width:.36rem;height:.36rem;top:.3rem;left:.4rem;}
+		input{width:5.7rem;height:.56rem;border-radius:.1rem;font-size:.3rem;color:black;outline:none;border:1px solid #ebebeb;padding-left:0.4rem;background: #ebebeb;float:left;margin:0.16rem 0 0 0.36rem;}
+		header span{font-size:0.34rem;color:#65C4AA;margin:-.56rem 0.25rem 0 0;float:right}
+		li{list-style: none;}
+ 
+		.Catalog{height:0.6rem;} 
+		.Catalog ul{border-bottom:1px solid #efefef;height:0.6rem;position:relative;}
+		.Catalog li{float:left;font-size:.3rem;color:#8B8B8B;padding-left:1.98rem;}
+		.Catalog span{position:absolute;width:1.0rem;height:.06rem;background:#65c4aa;top:0.56rem;
+			left:0.5rem;}
+
+		.Single ul{background:#f9f9f9;padding-top:.20rem;}
+		.Single li{display: inline-block;width: 3.20rem;height:4.64rem;text-align:center;margin-left: 0.2rem;}
+		.Single img{width: 3.45rem;height: 3.45rem;}
+		.Single p{font-size:.26rem;color:#404040;height:1.5rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+		.Single span{color:#FD888B;font-size:.3rem;line-height:.28rem}
+	</style>
+</head>
+<body>
+	<header>
+		<div>
+			<i class="iconfont" style="background:url(./images/so.jpg)no-repeat;background-size:100% 100%"></i>
+			<input type="text" placeholder="马克杯"><span>&nbsp;取消</span>
+		</div>
+	</header>
+	<section>
+		<div class="Catalog">
+			<ul>
+				<li style="padding-left: 0.70rem;color:#65C4AA">单品</li>
+				<li>帖子</li>
+				<li>用户</li>
+				<span></span>
+			</ul>
+		</div>
+		<div class="Single" style="margin-top:0.2rem">
+			<ul>
+				<li>
+					<img src="./images/b.jpg" alt="">
+					<p>Sower 意点陶瓷马克杯系列<br/><br/><span>￥119</span></p>
+				</li>
+				<li>
+					<img src="./images/b2.jpg" alt="">
+					<p>Sower 意点陶瓷马克杯系列<br/><br/><span>￥119</span></p>
+				</li>
+				<li>
+					<img src="./images/b3.jpg" alt="">
+					<p>Sower 意点陶瓷马克杯系列<br/><br/><span>￥119</span></p>
+				</li>
+				<li>
+					<img src="./images/b4.jpg" alt="">
+					<p>Sower 意点陶瓷马克杯系列<br/><br/><span>￥119</span></p>
+				</li>
+				<li>
+					<img src="./images/b5.jpg" alt="">
+					<p>Sower 意点陶瓷马克杯系列<br/><br/><span>￥119</span></p>
+				</li>
+				<li>
+					<img src="./images/b6.jpg" alt="">
+					<p>Sower 意点陶瓷马克杯系列<br/><br/><span>￥119</span></p>
+				</li>
+			</ul>
+		</div>
+		<!-- <div class="Post">
+			<ul>
+				<li></li>
+			</ul>
+		</div> -->
+	</section>
+
+	<script>
+		window.onload = function(){
+            getRem(750,100)
+        };
+        window.onresize = function(){
+            getRem(750,100)
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+        }
+	</script>
+</body>
+</html>

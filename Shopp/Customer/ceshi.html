@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>客服</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<style>
+		html,body,ul,p{margin:0;padding:0;}
+		body{max-width:760px;margin:0 auto;}
+		header .C-div{height:.88rem;border-bottom:1px solid #e6e6e6;font-size:.4rem;text-align:center;}
+		header .C-div span{line-height:.88rem;padding-right:.32rem}
+		header .C-div img{width:.4rem;height:.4rem;float:left;margin:.28rem 0 0 .32rem;} 
+		section{background:#f9f9f9;position:relative;height:11.06rem;font-size: .3rem;}
+		section p{text-align:center}
+		section span{display:inline-block;border:.2rem solid #f9f9f9;margin-top: .5rem}
+		section img{width:1.4rem;height:1.4rem;margin-top:.2rem;border-radius:.7rem}
+		
+		section .d-left{float:left;padding-left:.34rem;}
+		section .d-left p:nth-of-type(1){margin-top:.4rem;}
+		section .d-left p:nth-of-type(2){display:inline-block;background:white;margin-top:.2rem;border-radius: .1rem;padding:.2rem;}
+		section .d-left img{float:left;}
+		section .d-left span{border-right:.2rem solid white;float:left;}
+		
+		section .d-right{float:right;clear:both;padding-right:.34rem;}
+		section .d-right img{float:right;}
+		section .d-right p:nth-of-type(1){margin-top:.4rem;}
+		section .d-right p:nth-of-type(2){display:inline-block;background:white;margin-top:.2rem;border-radius: .1rem;padding:.2rem;}
+		section .d-right span{border-left:.2rem solid white;float:right;}
+		
+		footer{position:fixed;bottom:0;height:1.38rem;background:#ebebeb;width:100%;font-size:.3rem;max-width:760px;}
+		footer .C-fixed span{position:absolute;bottom:.1rem;left:.24rem;color:#8b8b8b;font-size:.14rem;}
+		.C-fixed input{width:3.7rem;height:.8rem;outline:none;border:1px solid gray;border-radius:.1rem;font-size:.4rem;position:absolute;left:1.6rem;top:.35rem;}
+		.C-fixed img{position:absolute;}
+		.C-fixed img:nth-of-type(1){width:.62rem;height:.62rem;top:.3rem;left:.38rem;}
+		.C-fixed img:nth-of-type(2){width:.62rem;height:.62rem;top:.45rem;right:1.2rem;}
+		.C-fixed img:nth-of-type(3){width:.62rem;height:.62rem;top:.45rem;right:.36rem;}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="C-div">
+			<img src="./images/z.jpg" alt="图片开小差啦">
+			<span>爱购店小二</span>
+		</div>
+	</header>
+	<section>
+		<div class="d-left" style="float:left">
+			<p style="clear:both;">05-22&nbsp;17: 32</p>
+			<img src="./images/k.jpg" alt="图片开小差啦">
+			<span></span>
+			<p style="width:4.5rem;text-align: left;">
+				您好,店小二爱购很高兴为您服务,请问有什么可以帮助您的吗？请您输入关键字,店小二马上为您排忧解难哦~
+			</p>
+		</div>
+		<div class="d-right" style="float:right;clear:both;">
+			<p style="clear:both;">05-22&nbsp;17: 32</p>
+			<img src="./images/k.jpg" alt="图片开小差啦">
+			<span></span>
+			<p style="width:4.5rem;text-align: left;">
+				您好,店小二爱购很高兴为您服务,请问有什么可以帮助您的吗？请您输入关键字,店小二马上为您排忧解难哦~
+			</p>
+		</div>
+	</section>
+	<footer>
+		<div class="C-fixed">
+			<img id="img-left" src="./images/re.jpg" alt="图片被台风吹走啦">
+			<span>人工服务</span>
+			<input type="text">
+			<img id="img" src="./images/y.jpg" alt="图片被台风吹走啦" >
+			<img id="img-right" src="./images/j.jpg" alt="图片被台风吹走啦">
+		</div>
+	</footer>
+
+	<script>
+		window.onload = function(){
+            getRem(750,100)
+        };
+        window.onresize = function(){
+            getRem(750,100)
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+        }
+	</script>
+</body>
+</html>

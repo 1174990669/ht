@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>stay</title><!-- 待付款页面 -->
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<style> 
+		html,body,ul,p{margin:0;padding:0;}
+		body{background:#f9f9f9;max-width:768px;margin:0 auto;}
+		header{height:.86rem;border-bottom:2px solid #fafafa;background:white;}
+		header p{font-size:.3rem;text-align:center;line-height:.86rem;padding-right:.54rem}
+		header span{float:left;padding-left:.34rem}
+		.section-one{height:1.10rem;}
+		.section-one ul{height:1.10rem;border-bottom:2px solid #eaeaea;line-height:.60rem;position:relative;background:white;} 
+		.section-one li{list-style:none;display:inline-block;font-size:0.3rem;margin-left: .34rem}
+		.section-one i{position:absolute;width:1.10rem;height:0.08rem;background:#65c4aa;top:1.02rem;left:1.47rem}
+		
+		.section-two{text-align: center;margin-top:6.22rem;padding-bottom:3rem;}
+		.section-two p{font-size:0.34rem;margin:0;}
+		.section-two button{font-size:0.34rem;width:3.58rem;height:1.10rem;border:1px solid #71c8b0;color: #71c8b0;background: transparent;border-radius: 0.1rem;}
+	</style>
+</head>
+<body>
+	<header>
+		<p><span><</span>我的订单</p>
+	</header>
+	<section class="section-one">
+		<ul>
+			<li style="margin-left:.34rem">全部</li>
+			<li style="color:#65c4aa">待付款</li>
+			<li>待发货</li>
+			<li>已发货</li>
+			<li>已完成</li>
+			<i></i>
+		</ul>
+	</section>
+	<section class="section-two">
+		<p>您暂时还没有相关订单哦</p>
+		<button>快去商城剁手吧</button>
+	</section>
+	<script>
+		window.onload = function(){
+            getRem(750,100)
+        };
+        window.onresize = function(){
+            getRem(750,100)
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+        }
+	</script>
+</body>
+</html>

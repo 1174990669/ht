@@ -1,0 +1,205 @@
+<!DOCTYPE html><!-- 帖子社区最新页面 -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="swiper-3.4.2.min.css">
+	<script src='swiper-3.4.2.min.js'></script>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<style>  
+		html,body,ul,p{margin:0;padding:0;}
+		li{list-style:none} 
+		body{background:#f9f9f9;max-width:768px;margin:0 auto;}
+		.new-header .swiper-wrapper{width:7.5rem;height: 7.38rem;}
+		.new-p{height:.78rem;position:relative;}
+		.new-p .iconfont{position:absolute;width:.64rem;height:.64rem;font-size:.42rem;border-radius:50%;text-align:center;top:.56rem;overflow:hidden}
+		.new-p .iconfont:nth-of-type(1){left:.34rem;line-height:.6rem}
+		.new-p .iconfont:nth-of-type(2){right:.34rem;line-height:.6rem}
+		.new-header b{position:absolute;font-size:.3rem;font-weight: 400;width:.64rem;height: .64rem;background:#ececed;right:.3rem;top:6.64rem;border-radius:50%;text-align:center;line-height:.62rem}
+		.sec-div{height:1.24rem;border-bottom:1px solid #b3b3b3;background:white}
+		.sec-div img{width:.7rem;height:.7rem;margin-left:.35rem}
+		.sec-div p{font-size:.26rem;color:#6ac6ad;margin:-.93rem 0 0 1.16rem;}
+		.sec-div strong{color:#d6d6d6;font-weight: 400}
+		.sec-div span{float:right;color: #8b8b8b;font-weight: 800;padding-right:.32rem;margin-top:-.16rem}
+
+		.div-dl{height:3.34rem;background:white;}
+		.div-dl dl{font-size:.3rem;padding-left:.36rem;position:relative;}
+		.div-dl dd{margin:0;padding-right:.34rem}
+		.div-dl span{float:right;padding-right: .34rem;font-size:.26rem;color:#b1b1b1;}
+		.div-dl .iconfont{position:absolute;font-size:.6rem;width:1rem;height:1rem;border:1px solid gray;border-radius:50%;text-align:center;line-height:1rem;top:2.28rem;}
+		.div-dl .iconfont:nth-of-type(1){left:1.72rem;}
+		.div-dl .iconfont:nth-of-type(2){right:1.72rem;}
+
+		.div-ce{margin-top: .14rem;background:white}
+		.div-ce p{height:.98rem;background:#65c4aa;font-size:.3rem;text-align:center;line-height:.98rem;color:white;}
+		/*.dic-ce .ul-img{overflow:hidden;}*/
+		.div-ce .iconfont{font-size:.4rem;}
+		.div-ce li{list-style:none;height:1.7rem;padding:.1rem .3rem;display:inline-block;width: 100vw;}
+		.div-ce li img{float:left;width:.6rem;height:.6rem;padding-right:.1rem}
+		/* .div-ce .ul-img  p{font-size:.3rem;background:transparent;color:#6a6a6a;margin-top:-1.5rem;line-height:1rem;}
+		.fixed{font-size:.3rem;height:.86rem;border-bottom:1px solid #ececec;margin-top:.1rem;background:white;line-height:.86rem}
+		.fixed strong{float:left;padding-left:.42rem;font-weight:400;}
+		.fixed p{float:right;margin-right:.4rem;width:2.40rem;height:.6rem;position:relative;border:1px solid #65c4aa;border-radius:.1rem;overflow:hidden;margin-top:.15rem}
+		.fixed span{position:absolute;height:.6rem;text-align:center;line-height:.6rem}
+		.fixed span:nth-of-type(1){width:50%;background:#65c4aa;color:white;right:1.2rem; }
+		.fixed span:nth-of-type(2){width:50%;color:#65c4aa;right:0;}
+		.div-top{height:1.82rem;font-size:.3rem;padding-left: .34rem;margin-top:.38rem}
+		.div-top img{width:.74rem;height:.74rem;}
+		.div-top h3{color:#67c5ab;margin:-0.7rem 0 0 .9rem;}
+		.div-top p{font-size:.3rem;}
+		.div-bottom{height:1.06rem;font-size:.3rem;margin-top:0.4rem;padding-bottom:0.4rem;}
+		.div-bottom strong{float:left;padding-left:.34rem}
+		.div-bottom .bot-right{float:right;padding-right:.34rem;position:relative;margin-top:-.15rem}
+		.bot-right img{width:0.6rem;height:.6rem}
+		.bot-right img:nth-of-type(1){margin-right: 1rem}
+		.bot-right img:nth-of-type(2){margin-right: .92rem}
+		.bot-right span{position:absolute;top:.15rem;font-weight:400;}
+		.bot-right span:nth-of-type(1){right:2.08rem;}
+		.bot-right span:nth-of-type(2){right:.34rem;} */
+		.S-fixed{position:fixed;bottom:0;width:7.5rem;z-index:99;}
+		.div-fixed{height:5.6rem;background:#c8c8c7;font-size:.3rem;position:relative;}
+		.div-fixed .s-left{float:right;margin:.34rem .3rem 0 0}
+		.div-fixed .s-left img{width:.36rem;height:.36rem;}
+		.div-fixed p{width:100%;text-align:center}
+		.div-fixed p:nth-of-type(1){float:left;margin:.0rem 0 .56rem 0;}
+		.div-fixed p:nth-of-type(2){background:white;height:1.1rem;position:absolute;bottom:0;line-height:1.1rem}
+		.div-fixed ul{clear:both;margin:0 .2rem 0 .5rem;}
+		.div-fixed li{display:inline-block;margin-right:.46rem;text-align:center;font-size:.22rem}
+		.div-fixed li img{border-radius:.23rem;width:1.1rem;height:1.1rem;}
+
+	</style>
+</head>
+<body>
+	<header class="new-header">
+		<div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide" style="background: url(./images/newd.jpg)no-repeat;background-size: 100% 100%;">
+	            	<p class="new-p">
+						<i class="iconfont" style="background:url(./images/t.jpg)no-repeat;background-size:100% 100%;"></i>
+						<i class="iconfont" style="background:url(./images/fx.jpg)no-repeat;background-size:100% 100%;"></i>
+	            	</p>
+	            	<b>1/2</b>
+	            </div>
+	            <div class="swiper-slide" style="background: url(./images/m3.jpg)no-repeat;background-size: 100% 100%;">
+	            	<p class="new-p">
+						<i class="iconfont" style="background:url(./images/t.jpg)no-repeat;background-size:100% 100%;"></i>
+						<i class="iconfont" style="background:url(./images/fx.jpg)no-repeat;background-size:100% 100%;"></i>
+	            	</p>
+	            	<b>2/2</b>
+	            </div>
+	        </div>
+	    </div>
+	</header>
+	<section>
+		<div class="sec-div">
+			<img src="./images/tx2.jpg" alt="图片开小差啦">
+			<p>简单的小生活<br/><strong>开心每一天<span>···</span></strong></p>
+		</div>	
+	</section>
+	<section style="padding-top:.1rem;background:white">
+		<div class="div-dl">
+			<dl>
+				<dt>就是想晒晒</dt>
+				<dd>阳光正好, 适合出去走走, 晒晒我刚买的小餐具, 在家窝久了, 出去放放风, 开心。</dd>
+				<br/>
+				<span>2017/05/17</span><br/>
+				<i class="iconfont icon-dianzan"></i>
+				<i class="iconfont icon-aixin"></i>
+			</dl>
+		</div>
+		<div class="div-ce">
+			<p><i class="iconfont icon-xiaoxi"></i>&nbsp;&nbsp;&nbsp;&nbsp;添 加 我 的 回 帖</p>
+			<!-- <ul class="ul-img">
+				<li>
+					<img src="./images/tx.jpg" alt="图片开小差啦">
+					<img src="./images/tx2.jpg" alt="图片开小差啦">
+					<img src="./images/tx.jpg" alt="图片开小差啦">
+					<img src="./images/tx2.jpg" alt="图片开小差啦">
+					<img src="./images/tx.jpg" alt="图片开小差啦">
+					<img src="./images/tx2.jpg" alt="图片开小差啦">
+					<img src="./images/tx.jpg" alt="图片开小差啦">
+					<img src="./images/tx2.jpg" alt="图片开小差啦">
+					<img src="./images/tx.jpg" alt="图片开小差啦">
+					<img src="./images/tx2.jpg" alt="图片开小差啦">
+				</li>
+				<p><span>20 </span>次赞&nbsp;&nbsp;<i class="iconfont icon-xiasanjiao"></i></p>
+			</ul> -->
+		</div>
+	</section>
+	<footer class="S-fixed">
+		<div class="div-fixed">
+			<span class="s-left">
+				<img src="./images/x.jpg" alt="图片被台风吹走啦">
+			</span>
+			<p>选择要分享到的平台</p>
+			<ul>
+				<li>
+					<img src="./images/xlogo.jpg" alt="图片被台风吹走啦"><br/>
+					<span>微博</span>
+				</li>
+				<li>
+					<img src="./images/plogo.jpg" alt="图片被台风吹走啦"><br/>
+					<span>朋友圈</span>
+				</li>
+				<li>
+					<img src="./images/wlogo.jpg" alt="图片被台风吹走啦"><br/>
+					<span>微信</span>
+				</li>
+				<li>
+					<img src="./images/dlogo.jpg" alt="图片被台风吹走啦"><br/>
+					<span>更多</span>
+				</li>
+			</ul>
+			<p>取消分享</p>
+		</div>
+	</footer>
+	<!-- <footer>
+		<div class="fixed">
+			<strong>回帖&nbsp;1</strong>
+			<p><span>热门</span><span>最新</span></p>
+		</div>
+		<ul>
+			<li>
+				<div class="div-top">
+					<img src="./images/tx2.jpg" alt="">
+					<h3>小安静</h3><br/>
+					<p>漂亮的小餐具。我也喜欢。</p>
+				</div>
+				<div class="div-bottom">
+					<strong>2017/5/19</strong>
+					<div class="bot-right">
+						<img src="./images/s.jpg" alt="">
+						<span>赞&nbsp;<a>0</a></span>
+						<img src="./images/q.jpg" alt="">
+						<span>评论&nbsp;<a>0</a></span>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</footer> -->
+	<script>
+		window.onload = function(){
+            getRem(750,100)
+        };
+        window.onresize = function(){
+            getRem(750,100)
+        };
+        function getRem(pwidth,prem){
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth/pwidth*prem + "px";
+        }
+
+        var swiper = new Swiper('.swiper-container', {
+	        //pagination: '.swiper-pagination',
+	        //nextButton: '.swiper-button-next',
+	        //prevButton: '.swiper-button-prev',
+	        paginationClickable: true,
+	        spaceBetween: 30,
+	        centeredSlides: true,
+	        autoplay: 2500,
+	        autoplayDisableOnInteraction: false
+	    });
+	</script>
+</body>
+</html>
